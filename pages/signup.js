@@ -1,12 +1,13 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { Input } from "../components/input";
 import Link from "next/link";
-import { useRouter } from "next/router"; // Cambiar useNavigate por useRouter
+import { useRouter } from "next/router";
 import React, { useState } from "react";
+import Head from "next/head";
 
 export default function Signup() {
   const methods = useForm();
-  const router = useRouter(); // Usar useRouter en lugar de useNavigate
+  const router = useRouter();
   const [showButtons, setShowButtons] = useState(true);
 
   const onSubmit = methods.handleSubmit(async (data) => {
@@ -15,8 +16,26 @@ export default function Signup() {
     await router.push('/profile'); // Usar await para la redirección
   });
 
+  const ocultarDiv = () => {
+    router.push('/pagina1?mostrarDiv=false');
+  };
+  const mostrarDiv = () => {
+    router.push('/pagina1?mostrarDiv=true');
+  };
+
   return (
     <>
+      <Head>
+        <title>BCIB - Iniciar Sesión</title>
+        <meta
+          name="description"
+          content="Iniciar sesión en Banco Capital ITBA"
+        />
+        <meta
+          name="robots"
+          content="index, follow"
+        />
+      </Head>
       <div className="grid place-items-center">
         <FormProvider {...methods}>
           <form
@@ -41,7 +60,8 @@ export default function Signup() {
             </div>
             <div className="mt-5">
               <button
-                type="submit" // Cambiar onClick por type="submit"
+                onClick={mostrarDiv}
+                type="submit"
                 className="btnRegistrarse"
               >
                 Iniciar sesión

@@ -1,10 +1,22 @@
 import Link from 'next/link';
 import Image from "next/image";
 import nosotros from '../public/images/about-us/nosotros.jpg';
+import Head from 'next/head';
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>BCIB - Nosotros</title>
+        <meta
+          name="description"
+          content="Información del Banco Capital ITBA"
+        />
+        <meta
+          name="robots"
+          content="index, follow"
+        />
+      </Head>
       <div className="grid">
         <Image src={nosotros} className="imgNosotros" alt="Edificio de la empresa BCIB" />
         <p className="pNosotros">Nos distinguimos por orientar nuestra vocación hacia el cliente. Por ello, en los últimos

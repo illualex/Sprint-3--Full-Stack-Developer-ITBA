@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 
 export default function Price() {
     const [currencies, setCurrencies] = useState([]);
@@ -37,6 +38,17 @@ export default function Price() {
 
     return (
         <>
+            <Head>
+                <title>BCIB - Cotización</title>
+                <meta
+                    name="description"
+                    content="Cotizador virtual de monedas"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, follow"
+                />
+            </Head>
             <div className="m-10">
                 <h1 className='m-5 text-3xl text-center'>Cotización de moneda</h1>
                 <div className="container-converter">

@@ -29,7 +29,7 @@ export default function Footer() {
                 </div>
                 <div className="p-10px text-center">
                     <div className="grid grid-cols-3">
-                        <a href="https://instagram.com/" target="_blank"><Image className="img-redes" src={instagram} /></a>
+                        <a href="https://instagram.com/" target="_blank"><Image className="img-redes" src={instagram} alt="logo instagram" /></a>
                         <a href="https://es-la.facebook.com/" target="_blank"><Image className="img-redes" src={facebook} alt="logo facebook" /></a>
                         <a href="https://twitter.com/" target="_blank"><Image className="img-redes" src={twitter} alt="logo twitter" /></a>
                     </div>

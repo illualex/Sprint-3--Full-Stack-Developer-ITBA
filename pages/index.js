@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Sidebar } from "../components/sidebar"; // Ajusta la ruta según la ubicación real de Sidebar
 import Navbar from "@/components/navbar";

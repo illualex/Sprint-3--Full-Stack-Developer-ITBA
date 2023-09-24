@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import React, { useState } from 'react';
 import creditCard from "../public/images/credit-card/credit-card-visa.png"
+import Head from 'next/head';
 
 export default function Profile() {
     const [montoDeSaldoBancario, setMontoDeSaldoBancario] = useState(100000);
@@ -40,6 +41,17 @@ export default function Profile() {
 
     return (
         <>
+            <Head>
+                <title>BCIB - Perfil</title>
+                <meta
+                    name="description"
+                    content="Perfil dentro de Banco Capital ITBA"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, nofollow"
+                />
+            </Head>
             <div className="userName">
                 <h1 className="mt-5 mb-12 text-3xl text-center">Bienvenido, Maxi! </h1>
             </div>

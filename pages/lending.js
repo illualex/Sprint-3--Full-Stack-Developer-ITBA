@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 import React, { useState } from 'react';
+import Head from 'next/head';
 
 export default function Lending() {
     const [monto, setMonto] = useState('');
@@ -49,6 +50,17 @@ export default function Lending() {
 
     return (
         <>
+            <Head>
+                <title>BCIB - Préstamos</title>
+                <meta
+                    name="description"
+                    content="Calculadora de prestamos del Banco Capital ITBA"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, follow"
+                />
+            </Head>
             <div className='grid place-items-center'>
                 <h1 className='mt-5 mb-10 text-3xl text-center'> Bienvenido al area de prestamos</h1>
                 <div className='w-1/2 bg-neutral-400 rounded-xl'>

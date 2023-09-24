@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 export default function Movement() {
     const [movimientos, setMovimientos] = useState([
@@ -23,6 +24,17 @@ export default function Movement() {
 
     return (
         <>
+            <Head>
+                <title>BCIB - Actividad</title>
+                <meta
+                    name="description"
+                    content="Actividad de tu perfil dentro del banco"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, nofollow"
+                />
+            </Head>
             <h1 className="mt-5 text-3xl text-center">Ultimos movimientos</h1>
             <section id="movement">
                 <div className="container" >

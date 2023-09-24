@@ -7,6 +7,7 @@ import Profile from "../pages/profile";
 import Movement from "../pages/movement";
 import Price from "../pages/price";
 import Lending from "../pages/lending";
+import Contact from "@/pages/contact";
 
 const Navbar = () => {
     return (
@@ -23,6 +24,7 @@ const Navbar = () => {
                         <li><Link href="/movement">Actividad</Link></li>
                         <li><Link href="/price">Cotización</Link></li>
                         <li><Link href="/lending">Préstamos</Link></li>
+                        <li><Link href="/contact">Contacto</Link></li>
                         <li><Link href="/about">Nosotros</Link></li>
                     </div>
                 </ul>
