@@ -40,7 +40,7 @@ const imageData = [
 ];
 const renderSlides = imageData.map((image) => (
     <div key={image.alt}>
-        <Image src={image.url} alt={image.alt} />
+        <Image src={image.url} alt={image.alt} loading='lazy'/>
     </div>
 ));
 
@@ -78,22 +78,22 @@ export default function Home() {
             </div>
             <div className="container-card">
                 <div className="card">
-                    <Image src={card1} className="img-card" alt="Persona dando la mano a un mecanico" />
+                    <Image src={card1} loading='lazy' className="img-card" alt="Persona dando la mano a un mecanico" />
                 </div>
                 <div className="card">
-                    <Image src={card2} className="img-card" alt="Persona trabajando en una cafeteria" />
+                    <Image src={card2} loading='lazy' className="img-card" alt="Persona trabajando en una cafeteria" />
                 </div>
                 <div className="card">
-                    <Image src={card3} className="img-card" alt="Telefono con graficos de inversiones" />
+                    <Image src={card3} loading='lazy' className="img-card" alt="Telefono con graficos de inversiones" />
                 </div>
                 <div className="card">
-                    <Image src={card4} className="img-card" alt="Aplicacion de Mercado libre en celular" />
+                    <Image src={card4} loading='lazy' className="img-card" alt="Aplicacion de Mercado libre en celular" />
                 </div>
                 <div className="card">
-                    <Image src={card5} className="img-card" alt="Tienda de ropa" />
+                    <Image src={card5} loading='lazy' className="img-card" alt="Tienda de ropa" />
                 </div>
                 <div className="card">
-                    <Image src={card6} className="img-card" alt="Lugar de CineMark" />
+                    <Image src={card6} loading='lazy' className="img-card" alt="Lugar de CineMark" />
                 </div>
             </div>
         </>

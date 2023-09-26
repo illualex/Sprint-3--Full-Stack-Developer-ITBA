@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="pl-30 overflow-hidden transition max-h-full delay-200 ease-out text-xl">
                         <li><Link href="/">Inicio</Link></li>
                         <li><Link href="/profile">Cuentas</Link></li>
-                        <li><Link href="/creditCard">Tarjetas de Credito</Link></li>
+                        <li><Link href="/creditCard">Tarjetas de Crédito</Link></li>
                         <li><Link href="/transference">Transferencia</Link></li>
                         <li><Link href="/payment">Pagos</Link></li>
                         <li><Link href="/movement">Actividad</Link></li>

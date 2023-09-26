@@ -1,9 +1,21 @@
 import Link from 'next/link';
 import accounts from './bankAccounts/accounts';
+import Head from 'next/head';
 
 function Recipients() {
     return (
         <>
+            <Head>
+                <title>BCIB - Agenda de Destinatarios</title>
+                <meta
+                    name="description"
+                    content="Destinatarios agendados de anteriores operaciones en Banco Capital ITBA"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, nofollow"
+                />
+            </Head>
             <div className='grid place-items-center pb-5'>
                 <div>
                     <h1 className='text-3xl text-center p-5 mb-5'>Agenda de Destinatarios</h1>

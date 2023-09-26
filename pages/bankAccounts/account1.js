@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import accounts from './accounts';
 import Link from 'next/link';
+import Head from 'next/head';
 
 function Account1() {
     const router = useRouter();
@@ -9,6 +10,17 @@ function Account1() {
 
     return (
         <>
+            <Head>
+                <title>BCIB - Detalle de la Cuenta Bancaria</title>
+                <meta
+                    name="description"
+                    content="Detalle de la cuenta del destinatario de tu perfil en Banco Capital ITBA"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, nofollow"
+                />
+            </Head>
             <div className='grid place-items-center pb-5'>
                 <h1 className='text-3xl p-5'>Detalles de la Cuenta Bancaria</h1>
                 <div className='grid grid-cols-2 gap-4 text-lg m-5'>

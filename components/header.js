@@ -20,7 +20,7 @@ export default function Header() {
                     <Navbar></Navbar>
                 </div>
                 <div className="flex m-1 justify-center">
-                    <Link href="/"><Image className="w-28" src={logo} alt="logo de banco BCIB" /></Link>
+                    <Link href="/"><Image className="w-28" loading='lazy' src={logo} alt="logo de banco BCIB" /></Link>
                 </div>
                 <div className="m-1">
                     <div className="buttonMenu justify-end">

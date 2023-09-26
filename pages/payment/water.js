@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const getInvoiceDetails = (id) => {
     return {
@@ -21,8 +22,19 @@ export async function getServerSideProps({ params }) {
 function Water({ factura }) {
     return (
         <>
+            <Head>
+                <title>BCIB - Detalle de la Factura</title>
+                <meta
+                    name="description"
+                    content="Detalle de las facturas dentro de tu cuenta en Banco Capital ITBA"
+                />
+                <meta
+                    name="robots"
+                    content="noindex, nofollow"
+                />
+            </Head>
             <div className='grid place-items-center pb-5'>
-                <h1>Detalle de Factura</h1>
+                <h1 className='text-3xl m-5'>Detalle de Factura</h1>
                 <div className='grid grid-cols-2 gap-4 text-lg m-5'>
                     <div>
                         <label className='block font-bold p-1'>Tipo:</label>

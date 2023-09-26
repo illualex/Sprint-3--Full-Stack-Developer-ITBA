@@ -20,23 +20,21 @@ export default function Footer() {
                     <p className="mt-4 text-xs">Contacto: <a href="mailto:bancocapitalitba2023@hotmail.com">bancocapitalitba2023@hotmail.com</a></p>
                 </div>
                 <div className="col-span-1 text-center">
-                    <Image src={logo} alt="Logo Banco Nacional ITBA" className="w-20 mx-auto pb-1" />
+                    <Image loading='lazy' src={logo} alt="Logo Banco Nacional ITBA" className="w-20 mx-auto pb-1" />
                     <p className='text-xs'>© 2023 Banco Capital ITBA <br /> Todos los derechos Reservados.</p>
                 </div>
                 <div className="flex justify-end">
                     <div className="flex justify-center items-center gap-2 mx-5">
-                        <a href="https://instagram.com/" target="_blank" className="block w-10"><Image src={instagram} alt="logo instagram" /></a>
-                        <a href="https://es-la.facebook.com/" target="_blank" className="block w-10"><Image src={facebook} alt="logo facebook" /></a>
-                        <a href="https://twitter.com/" target="_blank" className="block w-10"><Image src={twitter} alt="logo twitter" /></a>
+                        <a href="https://instagram.com/" target="_blank" className="block w-10"><Image loading='lazy' src={instagram} alt="logo instagram" /></a>
+                        <a href="https://es-la.facebook.com/" target="_blank" className="block w-10"><Image loading='lazy' src={facebook} alt="logo facebook" /></a>
+                        <a href="https://twitter.com/" target="_blank" className="block w-10"><Image loading='lazy' src={twitter} alt="logo twitter" /></a>
                     </div>
                     <div className="flex justify-center items-center gap-2 mt-2 mx-5">
-                        <a href="https://play.google.com/store/" target="_blank" className="block w-10"><Image src={google} alt="logo google playstore" /></a>
-                        <a href="https://www.apple.com/la/app-store/" target="_blank" className="block w-10"><Image src={apple} alt="logo apple store" /></a>
+                        <a href="https://play.google.com/store/" target="_blank" className="block w-10"><Image loading='lazy' src={google} alt="logo google playstore" /></a>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank" className="block w-10"><Image loading='lazy' src={apple} alt="logo apple store" /></a>
                     </div>
                 </div>
             </div>
-
-
         </>
     )
 }

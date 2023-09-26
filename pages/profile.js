@@ -6,10 +6,10 @@ export default function Profile() {
     return (
         <>
             <Head>
-                <title>BCIB - Perfil</title>
+                <title>BCIB - Cuenta</title>
                 <meta
                     name="description"
-                    content="Perfil dentro de Banco Capital ITBA"
+                    content="Cuenta dentro de Banco Capital ITBA"
                 />
                 <meta
                     name="robots"
