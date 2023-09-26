@@ -16,15 +16,15 @@ export default function Lending() {
         else if (a >= 6 && a < 10) interes = 0.075; // 7.5% 
         else if (a >= 10 && a < 14) interes = 0.1; // 10%
         let operacion = b * a * interes;
-        return operacion;
+        return operacion.toFixed(2);
     };
     const calcularTotal = (a, b) => {
         let number1 = parseInt(a);
         let number2 = parseInt(b);
-        return number1 + number2;
+        return (number1 + number2).toFixed(2);
     };
     const calcularCuota = (a, b) => {
-        return a / b;
+        return (a / b).toFixed(2);
     };
     const handleCalcularClick = () => {
         if (monto === '' || meses === '') return;
@@ -58,48 +58,50 @@ export default function Lending() {
                     content="noindex, follow"
                 />
             </Head>
-            <div className='grid place-items-center'>
-                <h1 className='mt-5 mb-10 text-3xl text-center'>Préstamos</h1>
-                <div className='grid grid-cols-2 gap-4 w-3/4'>
-                    <div className='bg-gray-300 rounded-xl p-4 flex flex-col justify-between'>
+            <div className="grid place-items-center">
+                <h1 className="mt-5 mb-6 text-2xl sm:text-3xl text-center">Préstamos</h1>
+                <div className="w-full sm:w-3/4">
+                    <div className="bg-gray-300 rounded-xl mx-5 p-4 space-y-6">
                         <section className="mb-4">
-                            <div className="grid grid-cols-2 gap-4 mb-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="flex flex-col">
-                                    <label className="text-lg mt-2 mb-4">Ingrese su monto: </label>
-                                    <label className="text-lg">Cantidad de meses: </label>
-                                </div>
-                                <div>
+                                    <label className="text-lg mt-2 mb-2 sm:mb-4">Ingrese su monto:</label>
                                     <input
                                         type="number"
-                                        className="border rounded-lg m-2"
+                                        className="border rounded-lg p-2 sm:p-3"
                                         placeholder="Ingrese el Monto"
                                         value={monto}
                                         onChange={(e) => setMonto(e.target.value)}
                                     />
+                                </div>
+                                <div className="flex flex-col">
+                                    <label className="text-lg mt-2 mb-2 sm:mb-4">Cantidad de meses:</label>
                                     <input
                                         type="number"
-                                        className="border rounded-lg m-2"
+                                        className="border rounded-lg p-2 sm:p-3"
                                         placeholder="Ingrese los Meses"
                                         value={meses}
                                         onChange={(e) => setMeses(e.target.value)}
                                     />
                                 </div>
                             </div>
-                            <div className='grid place-content-center'>
-                                <button className="btnRegistrarse" onClick={handleCalcularClick}>Simular</button>
+                            <div className="grid place-content-center m-5">
+                                <button className="btnRegistrarse w-full" onClick={handleCalcularClick}>
+                                    Simular
+                                </button>
                             </div>
                         </section>
                         <hr />
-                        <section className="text-xl mt-4">
+                        <section className="grid place-content-center text-lg mt-4">
                             <p className="amount-result">Monto a devolver: ${resultadoTotal}</p>
                             <p className="month-tax">Cuota mensual: ${cuotaMensual}</p>
                             <p className="tax">Intereses: ${resultadoTax}</p>
                         </section>
                     </div>
-                    <div className="bg-gray-300 rounded-xl p-4 flex flex-col justify-between">
+                    <div className="bg-gray-300 rounded-xl p-4 my-5 mx-5 space-y-4">
                         <section className="text-center">
                             <h2 className="font-bold text-lg">Tabla de Intereses</h2>
-                            <table className="table-auto mx-auto bg-white p-4 rounded-2xl">
+                            <table className="table-auto mx-auto bg-white p-2 sm:p-4 rounded-2xl">
                                 <tbody>
                                     <tr>
                                         <td className="w-1/2">Meses</td>
@@ -124,12 +126,15 @@ export default function Lending() {
                                 </tbody>
                             </table>
                         </section>
-                        <div className='grid place-content-center'>
-                            <button className="btnRegistrarse mt-4" id='verificacion' onClick={handleVerificacionClick}>Solicitar Préstamo</button>
+                        <div className="grid place-content-center">
+                            <button className="btnRegistrarse w-full" id="verificacion" onClick={handleVerificacionClick}>
+                                Solicitar Préstamo
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

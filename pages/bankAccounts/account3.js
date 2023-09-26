@@ -21,28 +21,44 @@ function Account3() {
                     content="noindex, nofollow"
                 />
             </Head>
-            <div className='grid place-items-center pb-5'>
-                <h1 className='text-3xl p-5'>Detalles de la Cuenta Bancaria</h1>
-                <div className='grid grid-cols-2 gap-4 text-lg m-5'>
-                    <div>
-                        <label className='block font-bold p-1'>Nombre del Titular:&nbsp;</label>
-                        <label className='block font-bold p-1'>Nombre del Banco:&nbsp;</label>
-                        <label className='block font-bold p-1'>Número de Cuenta:&nbsp;</label>
-                        <label className='block font-bold p-1'>CUIL/CUIT:&nbsp;</label>
-                        <label className='block font-bold p-1'>CBU/CVU:&nbsp;</label>
-                        <label className='block font-bold p-1'>E-mail:&nbsp;</label>
-                    </div>
-                    <div>
-                        <p className='block p-1'> {account.accountName}</p>
-                        <p className='block p-1'> {account.bank}</p>
-                        <p className='block p-1'> {account.accountNumber}</p>
-                        <p className='block p-1'> {account.cuil}</p>
-                        <p className='block p-1'> {account.cbu}</p>
-                        <p className='block p-1'> {account.mail}</p>
-                    </div>
+            <div className="grid place-items-center p-5">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl p-2">Detalles de la Cuenta Bancaria</h1>
+                <div className="grid gap-4 text-sm sm:text-lg m-5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label className="block font-bold p-1">Nombre del Titular:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.accountName}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Nombre del Banco:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.bank}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Número de Cuenta:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.accountNumber}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">CUIL/CUIT:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.cuil}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">CBU/CVU:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.cbu}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">E-mail:&nbsp;</label></td>
+                                <td><p className="block p-1"> {account.mail}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div className='mb-4'>
-                    <button className='btnRegistrarse'><Link className='text-white' href="/recipients">Volver</Link></button>
+                <div className="mb-4 text-center">
+                    <button className="btnRegistrarse">
+                        <Link className="text-white" href="/recipients">
+                            Volver
+                        </Link>
+                    </button>
                 </div>
             </div>
         </>

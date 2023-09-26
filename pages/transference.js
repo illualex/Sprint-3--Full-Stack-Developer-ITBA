@@ -42,47 +42,65 @@ export default function Transference({ accountOptions }) {
                     content="noindex, nofollow"
                 />
             </Head>
-            <div className='grid place-items-center pb-5'>
+            <div className="grid place-items-center p-5">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl p-2">Transferencias entre Cuentas Bancarias</h1>
+                <div className="grid gap-4 text-lg m-5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label className="block font-bold p-1">Cuenta de origen:</label></td>
+                                <td><p className="block p-1">245-5745454 - Saldo: ${montoDeSaldoBancario}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Cuenta de destino:</label></td>
+                                <td><select
+                                    className="w-full p-2 border rounded-lg text-sm"
+                                    onChange={(e) => setToAccount(e.target.value)}
+                                    value={toAccount}
+                                >
+                                    <option value="">Seleccionar cuenta de destino</option>
+                                    {accountOptions.map((account) => (
+                                        <option key={account.id} value={account.id}>
+                                            {account.bank} - {account.accountName}
+                                        </option>
+                                    ))}
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Monto a transferir:</label></td>
+                                <td><input
+                                    className="block p-1 border rounded-lg"
+                                    type="number"
+                                    placeholder="Monto a Transferir"
+                                    value={amount}
+                                    onChange={(e) => setAmount(parseFloat(e.target.value))}
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Concepto:</label></td>
+                                <td><select className="block p-1 border rounded-lg text-sm">
+                                    <option>Varios</option>
+                                    <option>Alquileres</option>
+                                    <option>Cuota</option>
+                                    <option>Expensas</option>
+                                    <option>Facturas</option>
+                                    <option>Honorarios</option>
+                                </select></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div className="flex flex-col m-4 md:flex-row">
+                    <button className="btnRegistrarse" onClick={handleTransfer}>
+                        <p className='text-sm'>Realizar Transferencia</p>
+                    </button>
+                    <button className="btnRegistrarse">
+                        <Link className="text-white text-sm" href="/recipients">
+                            Agenda de destinatarios
+                        </Link>
+                    </button>
+                </div>
 
-                <h1 className="text-3xl p-5">Transferencias entre Cuentas Bancarias</h1>
-                <div className="grid grid-cols-2 gap-4 text-lg m-5">
-                    <div>
-                        <label className='block font-bold p-1'>Cuenta de origen:&nbsp;</label>
-                        <label className='block font-bold p-1'>Cuenta de destino:&nbsp;</label>
-                        <label className='block font-bold p-1'>Monto a transferir:&nbsp;</label>
-                        <label className='block font-bold p-1'>Concepto:&nbsp;</label>
-                    </div>
-                    <div>
-                        <p className='block p-1'>245-5745454 - Saldo: ${montoDeSaldoBancario}</p>
-                        <select className='block p-1 border rounded-lg' onChange={(e) => setToAccount(e.target.value)} value={toAccount}>
-                            <option value="">Seleccionar cuenta de destino</option>
-                            {accountOptions.map((account) => (
-                                <option key={account.id} value={account.id}>
-                                    {account.bank} - {account.accountName}
-                                </option>
-                            ))}
-                        </select>
-                        <input
-                            className='block p-1 border rounded-lg'
-                            type="number"
-                            placeholder="Monto a Transferir"
-                            value={amount}
-                            onChange={(e) => setAmount(parseFloat(e.target.value))}
-                        />
-                        <select className='block p-1 border rounded-lg'>
-                            <option>Varios</option>
-                            <option>Alquileres</option>
-                            <option>Cuota</option>
-                            <option>Expensas</option>
-                            <option>Facturas</option>
-                            <option>Honorarios</option>
-                        </select>
-                    </div>
-                </div>
-                <div className='flex m-4'>
-                    <button className='btnRegistrarse' onClick={handleTransfer}>Realizar Transferencia</button>
-                    <button className='btnRegistrarse'><Link className='text-white' href="/recipients">Agenda de destinatarios</Link></button>
-                </div>
             </div>
         </>
     )

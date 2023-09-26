@@ -41,16 +41,15 @@ export default function Signup() {
           <form
             onSubmit={onSubmit}
             noValidate
-            className="text-center m-20 p-10 w-1/2 bg-gray-300 rounded-xl"
+            className="text-center m-4 p-4 sm:p-10 w-11/12 md:w-1/2 lg:w-1/3 xl:w-1/4 bg-gray-300 rounded-xl"
           >
-            <div className="grid">
+            <div className="grid gap-4">
               <Input
                 label="Usuario"
                 type="text"
                 id="name"
                 placeholder="Ingrese el usuario"
               />
-              <br />
               <Input
                 label="Contraseña"
                 type="password"
@@ -58,11 +57,11 @@ export default function Signup() {
                 placeholder="Ingrese la contraseña"
               />
             </div>
-            <div className="mt-5">
+            <div className="grid place-content-center mt-4">
               <button
                 onClick={mostrarDiv}
                 type="submit"
-                className="btnRegistrarse"
+                className="btnRegistrarse w-full"
               >
                 Iniciar sesión
               </button>
@@ -70,6 +69,7 @@ export default function Signup() {
           </form>
         </FormProvider>
       </div>
+
     </>
   );
 }

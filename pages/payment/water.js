@@ -33,24 +33,36 @@ function Water({ factura }) {
                     content="noindex, nofollow"
                 />
             </Head>
-            <div className='grid place-items-center pb-5'>
-                <h1 className='text-3xl m-5'>Detalle de Factura</h1>
-                <div className='grid grid-cols-2 gap-4 text-lg m-5'>
-                    <div>
-                        <label className='block font-bold p-1'>Tipo:</label>
-                        <label className='block font-bold p-1'>Monto:</label>
-                        <label className='block font-bold p-1'>Vencimiento:</label>
-                        <label className='block font-bold p-1'>Beneficiario:</label>
-                    </div>
-                    <div>
-                        <p className='p-1'>{factura.tipo}</p>
-                        <p className='p-1'>$ {factura.monto.toFixed(2)}</p>
-                        <p className='p-1'>{factura.vencimiento}</p>
-                        <p className='p-1'>{factura.beneficiario}</p>
-                    </div>
+            <div className="grid place-items-center p-5">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl m-2">Detalle de Factura</h1>
+                <div className="grid gap-4 text-lg m-5">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label className="block font-bold p-1">Tipo:</label></td>
+                                <td><p className="p-1">{factura.tipo}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Monto:</label></td>
+                                <td><p className="p-1">$ {factura.monto.toFixed(2)}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Vencimiento:</label></td>
+                                <td><p className="p-1">{factura.vencimiento}</p></td>
+                            </tr>
+                            <tr>
+                                <td><label className="block font-bold p-1">Beneficiario:</label></td>
+                                <td><p className="p-1">{factura.beneficiario}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div className='mb-4'>
-                    <button className='btnRegistrarse'><Link className='text-white' href="/payment">Volver</Link></button>
+                <div className="mb-4 text-center">
+                    <button className="btnRegistrarse">
+                        <Link className="text-white" href="/payment">
+                            Volver
+                        </Link>
+                    </button>
                 </div>
             </div>
         </>

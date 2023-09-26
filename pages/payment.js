@@ -33,29 +33,29 @@ function Payment() {
           content="noindex, nofollow"
         />
       </Head>
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
-          <h1 class="col-span-3 text-3xl m-5 text-center">Panel de Facturas Pendientes</h1>
-          <table class="col-span-3 w-full table-auto mb-10">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+          <h1 className="col-span-3 text-3xl m-5 text-center">Panel de Facturas Pendientes</h1>
+          <table className="col-span-3 w-full table-auto mb-10">
             <thead>
               <tr>
-                <th class="border px-4 py-2">Tipo</th>
-                <th class="border px-4 py-2">Monto</th>
-                <th class="border px-4 py-2">Acción</th>
+                <th className="border px-4 py-2">Tipo</th>
+                <th className="border px-4 py-2">Monto</th>
+                <th className="border px-4 py-2">Acción</th>
               </tr>
             </thead>
             <tbody>
               {facturas.map(factura => (
                 <tr key={factura.id}>
-                  <td class="border px-4 py-2">{factura.tipo}</td>
-                  <td class="border px-4 py-2">${factura.monto.toFixed(2)}</td>
-                  <td class="border px-4 py-2">
+                  <td className="border px-4 py-2">{factura.tipo}</td>
+                  <td className="border px-4 py-2">${factura.monto.toFixed(2)}</td>
+                  <td className="border px-4 py-2">
                     {factura.pagada ? (
                       <span>Pagada</span>
                     ) : (
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <Link href={`/payment/${factura.id}`}>
-                          <p class="text-blue-500 hover:underline hover:text-blue-700">Ver Detalle</p>
+                          <p className="text-blue-500 hover:underline hover:text-blue-700">Ver Detalle</p>
                         </Link>
                         {!factura.pagada && (
                           <button className='btnRegistrarse' onClick={() => handlePagoFactura(factura.id)}>Pagar</button>

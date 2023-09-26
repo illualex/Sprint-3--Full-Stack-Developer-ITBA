@@ -63,7 +63,7 @@ export default function Home() {
                     content="index, follow"
                 />
             </Head>
-            <div className='px-10 mx-5'>
+            <div className='px-10 mx-5 w-full'>
                 <Carousel
                     showArrows={false}
                     autoPlay={true}

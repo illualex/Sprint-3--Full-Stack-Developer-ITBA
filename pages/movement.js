@@ -44,7 +44,7 @@ export default function Movement() {
                                         <td className="border p-3">{movimiento.fecha}</td>
                                         <td className="border p-3">{movimiento.descripcion}</td>
                                         <td className="border p-3">{movimiento.monto > 0 ? '+' : '-'}$ {Math.abs(movimiento.monto).toFixed(2)}</td>
-                                        <td className="border p-3">
+                                        <td className="border p-3 text-sm">
                                             <button className='btnRegistrarse' onClick={() => toggleDetalle(index)}>Ver Detalle</button>
                                             {mostrarDetalleIndex === index && (
                                                 <div className="dropdown mt-4">
