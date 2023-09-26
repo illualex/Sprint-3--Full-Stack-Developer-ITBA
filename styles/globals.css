@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&family=Poppins&family=Roboto+Condensed&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&family=Poppins&family=Roboto+Condensed&display=swap');
-
-:root{
+:root {
     --negro: #00100B;
-    --rojo:  #C42021;
-    --gris:  #7C8483;
-    --blanco:#F0F3F5;
+    --rojo: #C42021;
+    --gris: #7C8483;
+    --blanco: #F0F3F5;
 
     --title: 'Oswald', sans-serif;
     --text: 'Open Sans', sans-serif;
@@ -21,6 +21,9 @@
     box-sizing: border-box;
 }
 
+h1{
+    font-weight: bold;
+}
 body {
     background-color: #F0F3F5;
     font-family: 'Open Sans', sans-serif;
@@ -31,30 +34,30 @@ main {
     padding-top: 8px;
 }
 
-footer {
-    border-top: gray 0.1px solid;
-}
 
-a{
+
+a {
     text-decoration: none;
-    color:var(--negro);
+    color: var(--negro);
 }
 
 /* GRID CSS */
 .grid-container {
     display: grid;
 }
+
 .grid-item {
     text-align: center;
 }
+
 .menuHamburger {
     padding: 5px;
     justify-content: space-between;
     grid-template-columns: 80px auto 280px;
     box-shadow: 0px 0px 5px gray;
 }
-.carousel-grid,
-.footer-grid {
+
+.carousel-grid  {
     grid-column: 1 / span 3;
     grid-row: 3;
 }
@@ -62,6 +65,19 @@ a{
 /* ESTILO DEL LOGO */
 .imgLogo {
     width: 110px;
+}
+
+/* ESTILO TARJETAS CREDITO */
+.creditCard-border {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.selected-card {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px 2px #007bff;
 }
 
 /* BOTONES DEL MENU */
@@ -113,8 +129,8 @@ a{
 }
 
 .btnRegistrarse:hover {
-    background: gray;
-    color: black;
+    background: black;
+    color: white;
 }
 
 .btnInicioSesion,
@@ -414,64 +430,37 @@ a{
 }
 
 
-/* FOOTER ESTILO */
-.container-footer {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 20px;
-}
-
-.footer-condiciones {
-    text-align: left;
-    padding-top: 30px;
-}
-
-.footer-logo {
-    text-align: center;
-}
-
-.footer-redes-app {
-    padding: 10px;
-    text-align: center;
-}
-
-.img-redes {
-    padding: 10px;
-    cursor: pointer;
-    width: 55px;
-}
-
-.img-apps {
-    padding: 10px;
-    cursor: pointer;
-    width: 60px;
-}
-
 /* MOBILE RESPONSIVE */
 @media (max-width: 426px) {
-    .menuHamburger{
+    .menuHamburger {
         display: flex;
     }
-    .menuGrid{
+
+    .menuGrid {
         margin: 0 10px;
-        
+
     }
-    .buttonMenu{
+
+    .buttonMenu {
         display: inline-block;
         padding: 0;
-        
+
     }
-    .btnInicioSesion, .btnRegistrarse{
+
+    .btnInicioSesion,
+    .btnRegistrarse {
         display: flex;
         margin: 2px;
         padding: 0;
         width: 100px;
         text-decoration: none;
     }
+
     .imgLogo {
         padding-top: 10px;
         width: 100px;
     }
+
     .next,
     .prev {
         position: absolute;
@@ -485,20 +474,24 @@ a{
         transition: 0.6s ease;
         user-select: none;
     }
+
     .next {
         right: 0px;
         border-radius: 3px 0 0 3px;
     }
+
     .prev {
         left: 0px;
         border-radius: 0 3px 3px 0;
     }
+
     .container-card {
         display: inline-block;
         margin: 0 52px;
     }
+
     .card {
-        margin: 15px ;
+        margin: 15px;
         width: 250px;
         height: 280px;
         text-align: center;
@@ -507,19 +500,13 @@ a{
         align-items: center;
         user-select: none;
     }
-    .container-footer {
-        display: inline;
-    }
-    .footer-condiciones{
-        text-align: center;
-        padding: 0px;
-        margin: 15px;
-    }
+
 }
 
 
 /* TABLET RESPONSIVE */
 @media (max-width: 769px) {
+
     .next,
     .prev {
         position: absolute;
@@ -533,20 +520,24 @@ a{
         transition: 0.6s ease;
         user-select: none;
     }
+
     .next {
         right: 0px;
         border-radius: 3px 0 0 3px;
     }
+
     .prev {
         left: 0px;
         border-radius: 0 3px 3px 0;
     }
+
     .container-card {
         grid-template-columns: auto auto;
         column-gap: 0px;
         row-gap: 0px;
         padding: 20px;
     }
+
     .card {
         margin: 15px;
         width: 250px;

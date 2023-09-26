@@ -41,7 +41,7 @@ export default function Signup() {
           <form
             onSubmit={onSubmit}
             noValidate
-            className="text-center m-20 p-10 w-1/2 bg-neutral-400 rounded-xl"
+            className="text-center m-20 p-10 w-1/2 bg-gray-300 rounded-xl"
           >
             <div className="grid">
               <Input

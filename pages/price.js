@@ -6,7 +6,7 @@ import Head from 'next/head';
 export default function Price() {
     const [currencies, setCurrencies] = useState([]);
     const [selectedCurrency, setSelectedCurrency] = useState("USD");
-    const [amount, setAmount] = useState(1);
+    const [amount, setAmount] = useState(0);
     const [exchangeRate, setExchangeRate] = useState(null);
     useEffect(() => {
         fetch("https://v6.exchangerate-api.com/v6/caed938467e0116fc0f6a437/latest/ARS")
@@ -19,7 +19,6 @@ export default function Price() {
                 console.error("Error fetching currency list:", error);
             });
     }, []);
-
     useEffect(() => {
         fetch(`https://v6.exchangerate-api.com/v6/caed938467e0116fc0f6a437/pair/ARS/${selectedCurrency}`)
             .then((response) => response.json())
@@ -35,7 +34,6 @@ export default function Price() {
         setSelectedCurrency(event.target.value);
     };
 
-
     return (
         <>
             <Head>
@@ -49,14 +47,25 @@ export default function Price() {
                     content="noindex, follow"
                 />
             </Head>
-            <div className="m-10">
-                <h1 className='m-5 text-3xl text-center'>Cotización de moneda</h1>
-                <div className="container-converter">
-                    <section id="background">
-                        <label htmlFor="text" className="sub-title">Ingresa el monto deseado a cambiar</label>
-                        <input type="number" id="pesos" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Cantidad en pesos" />
-                        <section id="ops">
-                            <select id="moneda" value={selectedCurrency} onChange={handleCurrencyChange}>
+            <h1 className="mt-5 text-3xl text-center">Cotización de Monedas</h1>
+            <div className="flex justify-center items-center m-14">
+                <div className="w-full max-w-md bg-gray-300 rounded-lg">
+                    <section id="left-column" className="w-full p-4">
+                        <label className="block text-lg">Ingresa el monto deseado a cambiar</label>
+                        <input
+                            type="number"
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
+                            placeholder="Cantidad en pesos"
+                            className="w-full border p-2 rounded"
+                        />
+                        <section id="ops" className="mt-4">
+                            <select
+                                id="moneda"
+                                value={selectedCurrency}
+                                onChange={handleCurrencyChange}
+                                className="w-full border p-2 rounded"
+                            >
                                 {currencies.map((currency) => (
                                     <option key={currency} value={currency}>
                                         {currency}
@@ -64,8 +73,10 @@ export default function Price() {
                                 ))}
                             </select>
                         </section>
-                        <label htmlFor="resultado" className="sub-title">El cambio final es de:</label>
-                        <p id="resultado" className="bg-white">
+                    </section>
+                    <section id="right-column" className="w-full p-4">
+                        <label className="block text-lg">El cambio final es de:</label>
+                        <p className="bg-white p-2 rounded">
                             {exchangeRate ? (amount * exchangeRate).toFixed(2) : "Cargando..."} {selectedCurrency}
                         </p>
                     </section>

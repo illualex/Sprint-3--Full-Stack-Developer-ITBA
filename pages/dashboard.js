@@ -38,7 +38,6 @@ const imageData = [
         url: carousel5
     }
 ];
-
 const renderSlides = imageData.map((image) => (
     <div key={image.alt}>
         <Image src={image.url} alt={image.alt} />
@@ -47,7 +46,6 @@ const renderSlides = imageData.map((image) => (
 
 export default function Home() {
     const [currentIndex, setCurrentIndex] = useState();
-
     function handleChange(index) {
         setCurrentIndex(index);
     }
@@ -65,17 +63,19 @@ export default function Home() {
                     content="index, follow"
                 />
             </Head>
-            <Carousel
-                showArrows={true}
-                autoPlay={true}
-                infiniteLoop={true}
-                selectedItem={imageData[currentIndex]}
-                onChange={handleChange}
-                showThumbs={false}
-                className="carousel-container"
-            >
-                {renderSlides}
-            </Carousel>
+            <div className='px-10 mx-5'>
+                <Carousel
+                    showArrows={false}
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    selectedItem={imageData[currentIndex]}
+                    onChange={handleChange}
+                    showThumbs={false}
+                    className="carousel-container"
+                >
+                    {renderSlides}
+                </Carousel>
+            </div>
             <div className="container-card">
                 <div className="card">
                     <Image src={card1} className="img-card" alt="Persona dando la mano a un mecanico" />

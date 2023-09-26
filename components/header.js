@@ -19,16 +19,13 @@ export default function Header() {
                 <div className="m-1">
                     <Navbar></Navbar>
                 </div>
-                <div className="m-1">
+                <div className="flex m-1 justify-center">
                     <Link href="/"><Image className="w-28" src={logo} alt="logo de banco BCIB" /></Link>
                 </div>
                 <div className="m-1">
-                    <div className="buttonMenu ">
+                    <div className="buttonMenu justify-end">
                         <Link href="signup"><button className="btnInicioSesion">Iniciar <br /> Sesion</button></Link>
                         <Link href="signup"><button className="btnRegistrarse">Hacete <br /> Cliente</button></Link>
-                        {/* {mostrarDiv && <div><Link href="signup"><button className="btnInicioSesion">Iniciar <br /> Sesion</button></Link>
-                            <Link href="signup"><button className="btnRegistrarse">Hacete <br /> Cliente</button></Link></div>} */}
-
                     </div>
                 </div>
             </div>
