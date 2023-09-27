@@ -32,7 +32,7 @@ export default function Profile() {
                     <div className="bg-blue-300 rounded-lg shadow-md p-4">
                         <h2 className="text-xl font-semibold">Tarjeta Visa</h2>
                         <p className="text-gray-600">Termina en: 7807</p>
-                        <p className="pt-2">Ultimos consumos:</p>
+                        <p className="pt-2">Últimos consumos:</p>
                         <div className="pt-2">
                             <p className="font-bold text-2xl">$ 5200,65</p>
                             <p className="font-bold text-2xl">U$S 0,0</p>
@@ -41,7 +41,7 @@ export default function Profile() {
                     <div className="bg-orange-300 rounded-lg shadow-md p-4">
                         <h2 className="text-xl font-semibold">Tarjeta Mastercard</h2>
                         <p className="text-gray-600">Termina en: 4825</p>
-                        <p className="pt-2">Ultimos consumos:</p>
+                        <p className="pt-2">Últimos consumos:</p>
                         <div className="pt-2">
                             <p className="font-bold text-2xl">$ 7566,41</p>
                             <p className="font-bold text-2xl">U$S 15,0</p>

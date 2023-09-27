@@ -19,7 +19,7 @@ function CreditCard({ initialData }) {
 
     const handleLimitIncrease = async () => {
         if (selectedCard) {
-            alert('Su solicitud fue ingresada correctamente. A la brevedad recibira la respuesta');
+            alert('Su solicitud fue ingresada correctamente. A la brevedad recibirá la respuesta');
         } else {
             alert('Selecciona una tarjeta antes de solicitar un aumento de límite.');
         }
@@ -36,7 +36,7 @@ function CreditCard({ initialData }) {
     return (
         <>
             <Head>
-                <title>BCIB - Tarjetas de Credito</title>
+                <title>BCIB - Tarjetas de Crédito</title>
                 <meta
                     name="description"
                     content="Pagina de tarjetas de tu cuenta dentro de Banco Capital ITBA"
