@@ -22,11 +22,11 @@ const imageData = [
         url: carousel1
     },
     {
-        alt: "Persona atendiendo el telefono",
+        alt: "Persona atendiendo el teléfono",
         url: carousel2
     },
     {
-        alt: "Grupo de personas sacando dinero en cajeros automaticos",
+        alt: "Grupo de personas sacando dinero en cajeros automáticos",
         url: carousel3
     },
     {
@@ -34,7 +34,7 @@ const imageData = [
         url: carousel4
     },
     {
-        alt: "Imagen de monedas en escala representado un prestamo para una casa",
+        alt: "Imagen de monedas en escala representado un préstamo para una casa",
         url: carousel5
     }
 ];
@@ -78,16 +78,16 @@ export default function Home() {
             </div>
             <div className="container-card">
                 <div className="card">
-                    <Image src={card1} loading='lazy' className="img-card" alt="Persona dando la mano a un mecanico" />
+                    <Image src={card1} loading='lazy' className="img-card" alt="Persona dando la mano a un mecánico" />
                 </div>
                 <div className="card">
                     <Image src={card2} loading='lazy' className="img-card" alt="Persona trabajando en una cafeteria" />
                 </div>
                 <div className="card">
-                    <Image src={card3} loading='lazy' className="img-card" alt="Telefono con graficos de inversiones" />
+                    <Image src={card3} loading='lazy' className="img-card" alt="Teléfono con gráficos de inversiones" />
                 </div>
                 <div className="card">
-                    <Image src={card4} loading='lazy' className="img-card" alt="Aplicacion de Mercado libre en celular" />
+                    <Image src={card4} loading='lazy' className="img-card" alt="Aplicación de Mercado libre en celular" />
                 </div>
                 <div className="card">
                     <Image src={card5} loading='lazy' className="img-card" alt="Tienda de ropa" />

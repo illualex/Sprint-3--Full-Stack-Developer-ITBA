@@ -25,13 +25,13 @@ export default function Footer() {
                 </div>
                 <div className="text-center md:col-span-1 lg:col-span-1">
                     <div className="flex justify-center items-center gap-2">
-                        <a href="https://instagram.com/" target="_blank" className="block w-10"><Image loading="lazy" src={instagram} alt="logo instagram" /></a>
-                        <a href="https://es-la.facebook.com/" target="_blank" className="block w-10"><Image loading="lazy" src={facebook} alt="logo facebook" /></a>
-                        <a href="https://twitter.com/" target="_blank" className="block w-10"><Image loading="lazy" src={twitter} alt="logo twitter" /></a>
+                        <a href="https://instagram.com/" target="_blank" className="block w-10"><Image loading="lazy" src={instagram} alt="Logo Instagram" /></a>
+                        <a href="https://es-la.facebook.com/" target="_blank" className="block w-10"><Image loading="lazy" src={facebook} alt="Logo Facebook" /></a>
+                        <a href="https://twitter.com/" target="_blank" className="block w-10"><Image loading="lazy" src={twitter} alt="Logo Twitter" /></a>
                     </div>
                     <div className="flex justify-center items-center gap-2 mt-2">
-                        <a href="https://play.google.com/store/" target="_blank" className="block w-10"><Image loading="lazy" src={google} alt="logo google playstore" /></a>
-                        <a href="https://www.apple.com/la/app-store/" target="_blank" className="block w-10"><Image loading="lazy" src={apple} alt="logo apple store" /></a>
+                        <a href="https://play.google.com/store/" target="_blank" className="block w-10"><Image loading="lazy" src={google} alt="Logo Google PlayStore" /></a>
+                        <a href="https://www.apple.com/la/app-store/" target="_blank" className="block w-10"><Image loading="lazy" src={apple} alt="Logo Apple Store" /></a>
                     </div>
                 </div>
             </div>
